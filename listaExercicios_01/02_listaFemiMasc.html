@@ -7,10 +7,20 @@
 
     //ENTRADA
 
-
+    let listaDeNomes = ["João", "Maria", "José", "Amanda", "Beatriz", "Júlio", "Olívia"];
+    let mas = []
+    let fem = []
     //PROCESSAMENTO
 
-
+    for (let lista of listaDeNomes) {
+        const genero = prompt("Qual genero é esse nome " + lista + "? (Masculino (M) ou Feminino (F))").toUpperCase();
+        if (genero === "M"){
+            mas.push(lista)
+        } else{
+            fem.push(lista)
+        }
+    }
+    document.write("Os nome masculinos são <li>" + mas.join(", ") + " </li>e os feminios são <li>" + fem.join(", ") + ".</li>")
     //SAÍDA
 
 </script>
