@@ -7,10 +7,23 @@
 
     //ENTRADA
 
+    let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
+    let nomeJoao = [];
+    let semJoao = [];
 
     //PROCESSAMENTO
 
+    for(let lista of listaDeNomes){
+        let procurar = lista.search("joao");
+        if (procurar === 0){
+            semJoao.push(lista);
+        }else{
+            nomeJoao.push(lista);
+        }
+    }
 
     //SAÍDA
 
+    document.write(nomeJoao.join(", ") + " e " + semJoao.join(", "));
+    
 </script>

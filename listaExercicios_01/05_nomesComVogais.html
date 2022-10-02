@@ -7,10 +7,23 @@
 
     //ENTRADA
 
+    let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
+    let listaDeNomesVogal = [];
+    let restante = [];
 
     //PROCESSAMENTO
 
+    for (let lista of listaDeNomes){
+        let firstLetra = lista[0].charAt(0);
+        if( firstLetra === "A" | firstLetra === "E" | firstLetra === "I" | firstLetra === "O" | firstLetra === "U"){
+            listaDeNomesVogal.push(lista);
+        }else {
+            restante.push(lista)
+        }
+    }
 
     //SAÍDA
+
+    document.write("<li>Nome começados em vogal: " + listaDeNomesVogal.join(", ") + ".</li></br>" + "<li> Restantes dos nomes: " + restante.join(", ") + ".</li>" )
 
 </script>
