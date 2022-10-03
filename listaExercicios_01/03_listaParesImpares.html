@@ -1,4 +1,4 @@
-inteiros e decimais<meta charset="UTF-8">
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     //Considere a lista de números abaixo:
@@ -23,6 +23,6 @@ inteiros e decimais<meta charset="UTF-8">
 
     //SAÍDA
 
-    document.write( par.join(", ") + "</br>" +  impar.join(", ") ); 
+    document.write( par.sort((a, b) => (a - b)).join(", ") + "</br>" +  impar.sort((b, a) => (a - b)).join(", ") ); 
 
 </script>
