@@ -13,20 +13,17 @@
 
     //PROCESSAMENTO
 
-    for (let lista of listaDeNomes){
+    for (let lista of listaDeNomes) {
         let firstLetra = lista[0].charAt(0);
-        if( firstLetra === "A" | firstLetra === "E" | firstLetra === "I" | firstLetra === "O" | firstLetra === "U"){
+        if (firstLetra === "A" | firstLetra === "E" | firstLetra === "I" | firstLetra === "O" | firstLetra === "U") {
             listaDeNomesVogal.push(lista);
-        }else {
+        } else {
             restante.push(lista)
         }
     }
 
-    listaDeNomesVogal.sort();
-    restante.sort();
-
     //SAÍDA
 
-    document.write("<li>Nome começados em vogal: " + listaDeNomesVogal.join(", ") + ".</li></br>" + "<li> Restantes dos nomes: " + restante.join(", ") + ".</li>" )
+    document.write("<li>Nome começados em vogal: " + listaDeNomesVogal.sort().join(", ") + ".</li></br>" + "<li> Restantes dos nomes: " + restante.sort().join(", ") + ".</li>")
 
 </script>

@@ -9,20 +9,17 @@
 
     let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
     let pares = [];
-    let restante = [];
 
     //PROCESSAMENTO
     const qtnElementos = listaDeItens.length
     for(let lista of listaDeItens){
-        if (lista % 2 === 0){
-            pares.push(lista)
-        }else {
-            restante.push(lista)
-        }
+        if (lista % 2 === 0)pares.push(lista)
     }
+    const qtnPares = pares.length
+    
 
     //SAÍDA
 
-    document.write("<li>Lista dos numeros pares: " + pares.join(", ") + "</li></br>" + "<li>Lista dos restantes: " + restante.join(", ") + ".</li></br>" + "<li>Quantidades de itens iniciais era: " + qtnElementos + ".</li>")
+    document.write("<li>Lista dos números pares: " + pares.join(", ") + "</li></br>" + "<li>Números da lista atual: " + qtnPares + ".</li></br>" + "<li>Quantidades de itens iniciais era: " + qtnElementos + ".</li>")
 
 </script>

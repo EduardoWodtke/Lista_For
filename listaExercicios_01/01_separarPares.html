@@ -8,17 +8,21 @@
     //ENTRADA
 
     let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
+    let listaPar = [];
+    let listaImpar = [];
     
     //PROCESSAMENTO
 
     for (let lista of listaDeNumeros) {
         if (lista % 2 === 0){
-            document.write("<li>O numero " + lista + " é par.</li></br>");
+            listaPar.push(lista)
         } else{
-            document.write("<li>O numero " + lista  + " é impar.</li></br>");
+            listaImpar.push(lista)
         }
     }
 
     //SAÍDA
+
+    document.write("<li>Lista de numeros pares: " + listaPar.sort(((a, b) => (a - b))).join(", ") + "</li></br><li>Lista de númros impares: " + listaImpar.sort(((a, b) => (a - b))).join() + "</li>")  
 
 </script>

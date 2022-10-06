@@ -8,24 +8,22 @@
     //ENTRADA
 
     let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
-    let inteiros;
-    let restante;
-    let sinal;
+    let inteiros = [];
+    let restante = [];
 
     //PROCESSAMENTO
 
     for(let lista of listaDeNumeros){
-        sinal = Math.sign(lista)
-        if (sinal === "-"){
-            inteiros.push(lista)
+        if (lista > 0 && lista % 1 === 0){
+            inteiros.push(lista);
         }else {
-            restante.push(lista)
+            restante.push(lista);
         }
         
     }
 
     //SAÍDA
 
-    document.write("<li>Numeros ineteiros: " + )
+    document.write("<li>Numeros ineteiros: " +  inteiros.join(", ") + "</li></br><li>Numeros restantes: " + restante.join() + "</li>" )
 
 </script>
