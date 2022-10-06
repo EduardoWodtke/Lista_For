@@ -14,16 +14,15 @@
     //PROCESSAMENTO
 
     for(let lista of listaDeNomes){
-        let procurar = lista.search("joão");
-        if (procurar === 0){
-            semJoao.push(lista);
-        }else{
+        if (lista.toUpperCase().replace("Ã", "A").search("JOAO") >= 0){
             nomeJoao.push(lista);
+        }else{
+            semJoao.push(lista);
         }
     }
 
     //SAÍDA
 
-    document.write(nomeJoao.join(", ") + " e " + semJoao.join(", "));
+    document.write("<li>Nomes com joão: " + nomeJoao.join(", ") + "</li></br><li> nomes sem joão: " + semJoao.join(", ") + ".</li>");
     
 </script>
